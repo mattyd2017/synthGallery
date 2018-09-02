@@ -1,36 +1,29 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Synthesizer Detail";
 
 
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
+   
+
+<h1> @ViewBag.ModelName</h1>
+<h2>Type:@ViewBag.Type</h2>
+<h4>Description</h4>
+<div>@Html.Raw(ViewBag.Description)</div>
+
+@if (ViewBag.Specs.Length > 0)
+{
+    <h4>Specs</h4>
     <div>
-        <h1> @ViewBag.ModelName</h1>
-        <h2>Type:@ViewBag.Type</h2>
-        <h4>Description</h4>
-        <div>@Html.Raw(ViewBag.Description)</div>
-
-        @if (ViewBag.Specs.Length > 0)
-        {
-            <h4>Specs</h4>
-            <div>
-                <ul>
-                    @foreach (var spec in ViewBag.Specs)
-                    {
-                        <li>@spec</li>
-                    }
-                </ul>
-            </div>
-        }
-
+        <ul>
+            @foreach (var spec in ViewBag.Specs)
+            {
+                <li>@spec</li>
+            }
+        </ul>
     </div>
-</body>
-</html>
+}
+
+    
