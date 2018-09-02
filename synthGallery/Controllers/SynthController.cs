@@ -6,7 +6,11 @@ using System.Web.Mvc;
 
 namespace synthGallery.Controllers
 {
-    public class SynthController:Controller
+    public class SynthController : Controller
     {
+        public ActionResult Detail()
+        {
+            return View();
+        }
     }
 }
