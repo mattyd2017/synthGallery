@@ -92,7 +92,18 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\accessvirus.jpg" />
     <Content Include="Images\bone-50.jpg" />
+    <Content Include="Images\jdxa.jpg" />
+    <Content Include="Images\jupiter80.jpg" />
+    <Content Include="Images\korg arp oddssey.jpg" />
+    <Content Include="Images\kronos.jpg" />
+    <Content Include="Images\minikorg.jpg" />
+    <Content Include="Images\minimoog.jpg" />
+    <Content Include="Images\nordlead.jpg" />
+    <Content Include="Images\prophet.jpg" />
+    <Content Include="Images\sub37.jpg" />
+    <Content Include="Images\sys 8.jpg" />
     <Content Include="Images\the-amazing-spider-man-657.jpg" />
     <Content Include="Images\the-amazing-spider-man-700.jpg" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -108,6 +119,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Specs.cs" />
+    <Compile Include="Models\Syntheziers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -129,7 +142,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <PropertyGroup>

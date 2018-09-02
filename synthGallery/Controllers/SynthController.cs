@@ -18,9 +18,8 @@ namespace synthGallery.Controllers
             ViewBag.Specs = new string[]
             {
                 "voices: 2 analog oscilators",
-                "Year built: 1973",
-                "Manufactuer: Moog",
-                "country of manufature: USA"
+                "manufacturer: Moog",
+                "country of origin: USA"
             };
             return View();
         }
