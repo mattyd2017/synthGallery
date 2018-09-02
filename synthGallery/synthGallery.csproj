@@ -99,7 +99,7 @@
     <Content Include="Images\korg arp oddssey.jpg" />
     <Content Include="Images\kronos.jpg" />
     <Content Include="Images\minikorg.jpg" />
-    <Content Include="Images\minimoog.jpg" />
+    <Content Include="Images\mini-moog.jpg" />
     <Content Include="Images\nordlead.jpg" />
     <Content Include="Images\prophet.jpg" />
     <Content Include="Images\sub37.jpg" />
@@ -120,7 +120,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Specs.cs" />
-    <Compile Include="Models\Syntheziers.cs" />
+    <Compile Include="Models\Synthesizers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

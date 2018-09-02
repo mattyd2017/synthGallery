@@ -1,29 +1,61 @@
-﻿@{
+﻿
+@model synthGallery.Models.Synthesizers
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "Synthesizer Detail";
+    ViewBag.Title = Model.DisplayText;
 
 
 }
 
-
-   
-
-<h1> @ViewBag.ModelName</h1>
-<h2>Type:@ViewBag.Type</h2>
-<h4>Description</h4>
-<div>@Html.Raw(ViewBag.Description)</div>
-
-@if (ViewBag.Specs.Length > 0)
-{
-    <h4>Specs</h4>
-    <div>
-        <ul>
-            @foreach (var spec in ViewBag.Specs)
+<div class="row">
+    <div class="col-md-6">
+        <div class="well">
+            <h5><label>Model Name:</label> @Model.ModelName</h5>
+            <h5><label>Type:</label> @Model.TypeOfSynth</h5>
+            <h5><label>Favorite:</label> @(Model.Favourite? "Yes" : "No")</h5>
+            @if (Model.Specs.Length > 0)
             {
-                <li>@spec</li>
+                <h5>Artists:</h5>
+                <div>
+                    <ul>
+                        @foreach (var spec in Model.Specs)
+                        {
+                            <li>Voices:@spec.Voices </li>
+                            <li>Manufacturer:@spec.Manufacturer </li>
+                            <li>Made in:@spec.CountryOfOrigin</li>
+                        }
+                    </ul>
+                </div>
             }
-        </ul>
+        </div>
+        <h5>Description:</h5>
+        <div>@Html.Raw(Model.DescriptionHtml)</div>
     </div>
-}
+    <div class="col-md-6">
+        <img src="/Images/@Model.CoverImageFileName"
+             alt="@Model.DisplayText" class="img-responsive" />
+    </div>
 
-    
+</div>
+
+    @*<h1> @Model.ModelName</h1>
+    <h2>Type:@Model.TypeOfSynth</h2>
+    <h4>Description</h4>
+    <div>@Html.Raw(Model.DescriptionHtml)</div>
+
+    @if (Model.Specs.Length > 0)
+    {
+        <h4>Specs</h4>
+        <div>
+            <ul>
+                @foreach (var spec in Model.Specs)
+                {
+                    <li>Voices:@spec.Voices </li>
+                    <li>Manufacturer:@spec.Manufacturer </li>
+                    <li>Made in:@spec.CountryOfOrigin</li>
+                }
+            </ul>
+        </div>
+    }*@
+
+

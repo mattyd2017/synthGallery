@@ -5,29 +5,29 @@ using System.Web;
 
 namespace synthGallery.Models
 {
-    public class Syntheziers
+    public class Synthesizers
     {
         public int Id { get; set; }
         public string ModelName { get; set; }
-        public string Type { get; set; }
+        public string TypeOfSynth { get; set; }
 
         public string DescriptionHtml { get; set; }
 
         public Specs[]Specs { get; set; }
-        private bool Favourite { get; set; }
+        public bool Favourite { get; set; }
 
         public string DisplayText
         {
             get
             {
-                return ModelName + " " + Type;
+                return ModelName + " " + TypeOfSynth;
             }
         }
         public string CoverImageFileName
         {
             get
             {
-                return ModelName.Replace(" ", "-").ToLower()+ "-" + Type+ ".jpg" ;
+                return ModelName + ".jpg" ;
             }
         }
 
