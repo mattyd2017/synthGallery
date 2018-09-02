@@ -4,26 +4,26 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using synthGallery.Models;
+using synthGallery.Data;
 
 namespace synthGallery.Controllers
 {
     public class SynthController : Controller
     {
-        public ActionResult Detail()
-        {
-            var synths = new Synthesizers()
-            {
-              ModelName = "mini-moog",
-              TypeOfSynth = "Monophonic Analog",
-              DescriptionHtml = "<p>monophonic analog synthesizer</P>",
-              Specs = new Specs[]
-              {
-                  new Specs() {Voices = "2 analog osicilators", Manufacturer = " Moog ",CountryOfOrigin ="USA " }
-              }
-              
-            };
+        private SynthesizerRepository _synthesizers = null;
 
-            
+        public  SynthController()
+        {
+            _synthesizers = new SynthesizerRepository();
+        }
+
+        public ActionResult Detail(int? id)
+        {
+            if (id == null)
+            {
+                return HttpNotFound();
+            }
+            var synths = _synthesizers.GetSynthesizers((int)id);
             return View(synths);
         }
     }

@@ -92,18 +92,18 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
-    <Content Include="Images\accessvirus.jpg" />
+    <Content Include="Images\access virus.jpg" />
     <Content Include="Images\bone-50.jpg" />
     <Content Include="Images\jdxa.jpg" />
     <Content Include="Images\jupiter80.jpg" />
     <Content Include="Images\korg arp oddssey.jpg" />
     <Content Include="Images\kronos.jpg" />
     <Content Include="Images\minikorg.jpg" />
-    <Content Include="Images\mini-moog.jpg" />
+    <Content Include="Images\Mini Moog.jpg" />
     <Content Include="Images\nordlead.jpg" />
     <Content Include="Images\prophet.jpg" />
     <Content Include="Images\sub37.jpg" />
-    <Content Include="Images\sys 8.jpg" />
+    <Content Include="Images\System-8.jpg" />
     <Content Include="Images\the-amazing-spider-man-657.jpg" />
     <Content Include="Images\the-amazing-spider-man-700.jpg" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -116,6 +116,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\SynthController.cs" />
+    <Compile Include="Data\SynthesizerRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
