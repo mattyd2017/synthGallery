@@ -10,6 +10,18 @@ namespace synthGallery.Controllers
     {
         public ActionResult Detail()
         {
+
+            ViewBag.ModelName = "Model D mini moog";
+            ViewBag.Type = "MonoPhonic";
+            ViewBag.Description = "<p>monophonic analog synthesizier</P>";
+
+            ViewBag.Specs = new string[]
+            {
+                "voices: 2 analog oscilators",
+                "Year built: 1973",
+                "Manufactuer: Moog",
+                "country of manufature: USA"
+            };
             return View();
         }
     }
