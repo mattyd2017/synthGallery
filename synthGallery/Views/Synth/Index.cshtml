@@ -1,0 +1,17 @@
+﻿@model synthGallery.Models.Synthesizers[]
+@{
+    ViewBag.Title = "Synthesizers";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    @foreach (var synth in Model)
+    {
+        <div class="col-md-3">
+        <h3> @synth.DisplayText</h3>
+        <img src="~/Images/@synth.CoverImageFileName" alt="@synth.CoverImageFileName" class="img-responsive"/>
+        </div>
+    }
+</div>
+

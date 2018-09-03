@@ -16,7 +16,11 @@ namespace synthGallery.Controllers
         {
             _synthesizers = new SynthesizerRepository();
         }
-
+        public ActionResult Index()
+        {
+            var synth = _synthesizers.GetSynths();
+            return View(synth);
+        }
         public ActionResult Detail(int? id)
         {
             if (id == null)

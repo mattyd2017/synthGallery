@@ -49,7 +49,10 @@ namespace synthGallery.Data
 
             },
         };
-
+        public Synthesizers[] GetSynths()
+        {
+            return _synthesizers;
+        }
         public Synthesizers GetSynthesizers(int id)
         {
             Synthesizers synthesizerToReturn = null;
